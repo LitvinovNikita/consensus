@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Geographic Areas</title>
+</head>
+<body>
+	<h2>Geographic Area List</h2>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Level</th>
+        <th>Name</th>
+        <th>Alternative Code</th>
+    </tr>
+    <c:forEach var="area" items="${geographicAreas}">
+        <tr>
+            <td>${area.geographicAreaID}</td>
+            <td>${area.code}</td>
+            <td>${area.level}</td>
+            <td>${area.name}</td>
+            <td>${area.alternativeCode}</td>
+        </tr>
+    </c:forEach>
+</table>
+</body>
+</html>
